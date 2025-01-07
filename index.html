@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        header .logo img {
+            width: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            background-color: #e6f7ff;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1e90ff;
+            margin: 0 0 10px;
+        }
+
+        .hero img {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .hero input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .hero button:hover {
+            background-color: #4682b4;
+        }
+
+        .content-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content-title {
+            text-align: center;
+            color: #1e90ff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            background-color: #1e90ff;
+            color: white;
+            padding: 15px;
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            padding: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .card ul {
+            padding: 15px;
+            list-style: none;
+            margin: 0;
+        }
+
+        .card ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .card ul li:before {
+            content: "✔";
+            color: #1e90ff;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .steps-section {
+            background-color: #f1f1f1;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .steps-section h2 {
+            color: #1e90ff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps-list li {
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .steps-list li h4 {
+            color: #1e90ff;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .steps-list li p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="20250107_102702.png" alt="Bank Naufal Indonesia">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Limit Hingga 100 Juta!</h2>
+        <p>Cek limit pinjaman anda!</p>
+        <input type="text" placeholder="Masukkan Nomor Telepon Anda">
+        <button>Cek Limit</button>
+    </div>
+
+    <div class="steps-section">
+        <h2>Cara Menggunakan Aplikasi</h2>
+        <p>Pengajuan hanya 5 menit:</p>
+        <ul class="steps-list">
+            <li>
+                <h4>Langkah 1: Daftar atau Masuk</h4>
+                <p>Kunjungi halaman login dan daftar akun baru atau masuk menggunakan akun yang sudah ada untuk memulai.</p>
+            </li>
+            <li>
+                <h4>Langkah 2: Pilih Layanan</h4>
+                <p>Setelah berhasil masuk, pilih layanan yang Anda inginkan seperti Pinjam Dana, Simpan Dana, atau Program Deposito.</p>
+            </li>
+            <li>
+                <h4>Langkah 3: Isi Data Diri</h4>
+                <p>Isi informasi yang diperlukan untuk memproses layanan yang Anda pilih, seperti data diri dan dokumen yang diperlukan.</p>
+            </li>
+            <li>
+                <h4>Langkah 4: Tunggu Proses Persetujuan</h4>
+                <p>Setelah mengajukan permohonan, tunggu beberapa saat untuk proses persetujuan atau verifikasi.</p>
+            </li>
+            <li>
+                <h4>Langkah 5: Nikmati Layanan</h4>
+                <p>Setelah persetujuan diterima, Anda dapat segera menggunakan layanan yang telah diajukan.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 class="content-title">Layanan Kami</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Pinjam Dana</h3>
+                <p>Dapatkan pinjaman hingga Rp80 juta dengan bunga rendah dan proses cepat.</p>
+                <ul>
+                    <li>Proses cepat tanpa ribet</li>
+                    <li>Tenor fleksibel hingga 12 bulan</li>
+                    <li>Persyaratan mudah, hanya perlu KTP</li>
+                    <li>Pelayanan profesional dan aman</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Simpan Dana</h3>
+                <p>Keuntungan menarik dengan fasilitas simpan dana kami:</p>
+                <ul>
+                    <li>Bebas biaya administrasi</li>
+                    <li>Suku bunga tabungan kompetitif</li>
+                    <li>Akses kapan saja melalui aplikasi</li>
+                    <li>Dijamin aman dan diawasi oleh OJK</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Program Deposito</h3>
+                <p>Raih keuntungan lebih dengan program deposito berjangka kami:</p>
+                <ul>
+                    <li>Suku bunga hingga 5% per tahun</li>
+                    <li>Pilihan tenor fleksibel: 1 bulan, 3 bulan, 6 bulan, hingga 1 tahun</li>
+                    <li>Dana dijamin aman dan dilindungi oleh LPS</li>
+                    <li>Auto-rollover untuk kenyamanan Anda</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Bank Naufal Indonesia.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header .logo img {
+            width: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h2 {
+            margin: 0;
+            color: #1e90ff;
+        }
+
+        .profile-details {
+            margin-top: 20px;
+        }
+
+        .profile-details p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="20250107_102702.png" alt="Bank Naufal Indonesia">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html" class="active">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="profile-header">
+                <img src="IMG_20250107_200651_325.jpg" alt="Foto Profil">
+                <h2>Nama Nasabah: Budi Santoso</h2>
+            </div>
+            <div class="profile-details">
+                <p><strong>Email:</strong> nopal@unpam.com</p>
+                <p><strong>Nomor Telepon:</strong> +62 812 9999 9999</p>
+                <p><strong>Alamat:</strong> Jl. Jonggol, Indonesia</p>
+                <p><strong>Jenis Akun:</strong> Nasabah Prioritas</p>
+                <p><strong>Total Simpanan:</strong> Rp 25.000.000</p>
+                <p><strong>Total Pinjaman:</strong> Rp 10.000.000</p>
+                <p><strong>Status:</strong> Aktif</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Bank Naufal Indonesia.</p>
+    </footer>
+</body>
+</html>

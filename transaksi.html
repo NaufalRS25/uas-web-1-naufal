@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        header .logo img {
+            width: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #1e90ff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #4682b4;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e90ff;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            padding: 20px 15px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .menu-item:hover {
+            background-color: #4682b4;
+            transform: translateY(-3px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            const nama = document.getElementById('nama').value.trim();
+            const jumlah = document.getElementById('jumlah').value.trim();
+            const kategori = document.getElementById('kategori').value;
+
+            if (!nama || !jumlah || !kategori) {
+                alert('Semua input harus diisi!');
+                event.preventDefault(); // Mencegah pengiriman formulir
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="20250107_102702.png" alt="Bank Naufal Indonesia">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Menu Transaksi</h1>
+        <div class="menu-grid">
+            <button class="menu-item">Tarik Tunai</button>
+            <button class="menu-item">Transfer</button>
+            <button class="menu-item">Deposito</button>
+            <button class="menu-item">Pengajuan Pinjaman</button>
+            <button class="menu-item">Pembayaran Merchant</button>
+            <button class="menu-item">Pembayaran Tagihan</button>
+            <button class="menu-item">Top-Up E-Wallet</button>
+            <button class="menu-item">Laporan Transaksi</button>
+        </div>
+
+        <h2>Form Transaksi</h2>
+        <form action="#" method="post" onsubmit="validateForm(event)">
+            <label for="nama">Nama Transaksi:</label>
+            <input type="text" id="nama" name="nama" required>
+            
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" required>
+            
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" name="kategori">
+                <option value="">Pilih Kategori</option>
+                <option value="simpanan dana">Simpanan Dana</option>
+                <option value="pinjaman dana">Pinjaman Dana</option>
+            </select>
+            
+            <button type="submit">Simpan</button>
+        </form>
+
+        <h2>Daftar Transaksi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ATM BNI Unpam</td>
+                    <td>70,000,000</td>
+                    <td>Tarik Tunai</td>
+                </tr>
+                <tr>
+                    <td>TF to Santoso</td>
+                    <td>1,500,000</td>
+                    <td>Transfer</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Bank Naufal Indonesia.</p>
+    </footer>
+</body>
+</html>
